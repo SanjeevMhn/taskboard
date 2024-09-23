@@ -16,10 +16,10 @@ body{
     height: 100%;
 }
 
-@media screen and (min-width: 138rem){
+@media screen and (min-width: 144rem){
     .wrapper{
-        max-width: 138rem;
-        padding: 2rem 0;
+        max-width: 144rem;
+        padding: 2rem 4rem;
         margin: 0 auto;
     }
 }
