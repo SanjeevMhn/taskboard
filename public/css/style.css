@@ -1,0 +1,123 @@
+@import './reset.css';
+@import './vars.css';
+
+.main-header{
+    background-color: var(--primary-color);
+    .header-text{
+        font-size: 2.4rem;
+        color: #fff;
+        font-weight: 600;
+        font-family: var(--font);
+    }
+}
+
+.taskboard-container{
+    background-color: var(--secondary-color);
+    height: calc(100vh - 6.4rem);
+    padding: 2rem 0;
+}
+
+.taskcategory-list{
+    display: flex;
+    gap: 2rem;
+    overflow: auto;
+    height: 100%;
+    .taskcategory-column{
+        background-color: var(--grey-color);
+        border-radius: 8px;
+        flex: 0 0 calc(100% / 4);
+        height: 100%;
+        .column-header{
+            padding: 1.5rem;
+            color: #000;
+            font-size: 1.7rem;
+            font-weight: 600;
+            font-family: var(--font);
+            border-bottom: 1px solid #858585;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .actions{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                .task-count{
+                    font-size: 1.5rem;
+                    padding: 0.5rem;
+                    position: relative;
+                    isolation: isolate;
+                    color: #fff;
+                    height: 28px;
+                    width: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        background-color: var(--primary-color);
+                        border-radius: 5px;
+                        filter: opacity(.5);
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .task-container{
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        height: calc(100% - 6rem);
+        overflow-y: auto;
+        .task-item{
+            padding: 1.5rem;
+            background-color: #fff;
+            box-shadow: 0 0 8px 4px rgba(106, 106, 106, 0.26);
+            border: 1px solid #000;
+            border-radius: 8px;
+            font-size: 1.8rem;
+            font-family: var(--font);
+            color: #000;
+            cursor: pointer;
+        }
+    }
+}
+
+.icon-btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    outline: unset;
+    border-width: 0;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    .icon-container{
+        --size: 18px;
+        height: var(--size);
+        width: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            fill: #fff;
+        }
+    }
+    .label-text{
+        font-size: 1.4rem;
+    }
+
+}
+
